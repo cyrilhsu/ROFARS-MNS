@@ -25,6 +25,20 @@ pip install numpy==1.24.2 pandas==1.5.3 tqdm==4.64.1
 ```
 python example.py
 ```
+## Possible Solutions
+* [Multi-armed bandit problem](https://en.wikipedia.org/wiki/Multi-armed_bandit)
+  - Epsilon-greedy strategy
+  - Thompson sampling
+  - Upper Confidence Bound (UCB)
+  
+* [Traffic flow prediction](https://www.sciencedirect.com/science/article/pii/S2210537922000725)</br>
+<img width="400" src="https://ars.els-cdn.com/content/image/1-s2.0-S2210537922000725-gr1_lrg.jpg" />
+
+* [(Deep) reinforcement learning](https://en.wikipedia.org/wiki/Deep_reinforcement_learning)
+  - https://spinningup.openai.com/en/latest/
+  - https://stable-baselines.readthedocs.io/en/master/
+  - https://huggingface.co/deep-rl-course/unit1/rl-framework
+
 ## Contact
 Cyril Hsu - s.h.hsu@uva.nl</br>
 Dr. Chrysa Papagianni - c.papagianni@uva.nl

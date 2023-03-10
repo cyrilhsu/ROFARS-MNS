@@ -27,9 +27,10 @@ python example.py
 ```
 ## Possible Solutions
 * [Multi-armed bandit problem](https://en.wikipedia.org/wiki/Multi-armed_bandit)
-  - Epsilon-greedy strategy
-  - Thompson sampling
-  - Upper Confidence Bound (UCB)
+  - [Epsilon-greedy strategy](https://gdmarmerola.github.io/ts-for-bernoulli-bandit)
+  - [Thompson sampling](https://gdmarmerola.github.io/ts-for-bernoulli-bandit)
+  - [Upper Confidence Bound (UCB)](https://gdmarmerola.github.io/ts-for-bernoulli-bandit)
+  - [Non-stationary bandit](https://gdmarmerola.github.io/non-stationary-bandits)
   
 * [Traffic flow prediction](https://www.sciencedirect.com/science/article/pii/S2210537922000725)</br>
 <img width="400" src="https://ars.els-cdn.com/content/image/1-s2.0-S2210537922000725-gr1_lrg.jpg" />

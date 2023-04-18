@@ -37,7 +37,7 @@ for theta in range(5):
         best_total_reward = total_reward
 
     print(f'=== TRAINING theta: {theta} ===')
-    print('[total reward]:', env.get_total_reward())
+    print('[total reward]:', total_reward)
 
 print(f'Best found theta: {best_theta}')
     

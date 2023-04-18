@@ -9,14 +9,14 @@ from rofarsEnv import ROFARS_v1
 np.random.seed(0)
 
 env = ROFARS_v1()
-agent = baselineAgent()
-n_episode = 30
+best_theta = None
+best_total_reward = -np.inf
 
 # training
-for episode in range(n_episode):
+for theta in range(5):
 
     env.reset(mode='train')
-    agent.clear_records()
+    agent = baselineAgent(theta=theta)
     # give random scores as the initial action
     init_action = np.random.rand(env.n_camera)
     reward, state, stop = env.step(init_action)
@@ -31,13 +31,19 @@ for episode in range(n_episode):
         if stop:
             break
 
-    print(f'=== TRAINING episode {episode} ===')
+    total_reward = env.get_total_reward()
+    if total_reward > best_total_reward:
+        best_theta = theta
+        best_total_reward = total_reward
+
+    print(f'=== TRAINING theta: {theta} ===')
     print('[total reward]:', env.get_total_reward())
 
+print(f'Best found theta: {best_theta}')
     
 # testing
 env.reset(mode='test')
-agent.clear_records()
+agent = baselineAgent(theta=best_theta)
 # give random scores as the initial action
 init_action = np.random.rand(env.n_camera)
 reward, state, stop = env.step(init_action)

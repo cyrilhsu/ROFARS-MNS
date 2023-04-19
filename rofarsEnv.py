@@ -45,6 +45,7 @@ class ROFARS_v1:
         return np.mean(self.rewards).round(3)
 
     def step(self, action):
+        assert len(action) == self.n_camera
         # adding small noise to the action for randomness when all values are the same
         action += np.random.rand(*action.shape)/100
         # action is a vector of scores with n_camera-dimension
